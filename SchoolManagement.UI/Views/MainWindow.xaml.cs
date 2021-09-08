@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolManagement.UI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace SchoolManagement.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        StudentListViewModel vm = new StudentListViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = vm;
         }
     }
 }
